@@ -1,0 +1,392 @@
+
+.mgi__PC-Nav-Item{
+    padding: 0 0.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.mgi__PC-Nav-Item__Icon-bars-border:hover i,
+.mgi__PC-Nav-Item__Icon-bag:hover i,
+.mgi__PC-Nav-Item__Icon-search:hover i,
+.mgi__PC-Nav-Item:hover a{
+    animation: slow ease-in 0.2s;
+}
+
+.mgi__PC-Nav-Item a{
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+}
+.mgi__PC-Nav-Item__Icon-bars-border{
+    border: 1px solid rgba(255,255,255,.2);
+}
+.mgi__Mobile-Nav-Item__Icon-bars-border{
+    border: 1px solid rgba(255,255,255,.2);
+}
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.mgi__banner__bg-image{
+    padding-top: 6%;
+    max-width: 1800px;
+    height: auto;
+    overflow: hidden;
+}
+.mgi__banner__container{
+    width: 500%;
+    display: flex;
+}
+.mgi__banner__bg-image input{
+    display: none;
+}
+.mgi__banner{
+    position: relative;
+    background: url("../img/9.jpg") top center / cover no-repeat ;
+}
+@keyframes slow{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.mgi__banner-button:hover{
+    animation: slow ease-in 0.2s;
+}
+.mgi__banner__slide{
+width: 20%;
+transition: 1.5s;
+}
+
+/* @media screen and (max-width:1024px) {
+    .mgi__banner__slide{
+        width: ;
+    }
+    .first{
+        padding-left: 2%;
+    }
+} */
+/* @media screen and (max-width:670px) {
+    .first{
+        padding: 0;
+    }
+} */
+.mgi__banner__previous-button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -40px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+@keyframes prev-btn{
+    from{
+        opacity: 0.4;
+        transform: translateX(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(20px);
+    }
+}
+@keyframes next-btn{
+    from{
+        opacity: 0.4;
+        transform: translateX(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-40px);
+    }
+}
+.mgi__banner:hover .mgi__banner__previous-button{
+    display: block;
+    left: 20px;
+    animation: prev-btn ease-in 0.3s;
+}
+.mgi__banner:hover .mgi__banner__next-button{
+    display: block;
+    right: 20px;
+    animation: next-btn ease-in 0.3s;
+}
+.mgi__banner__next-button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -40px;
+    display: flex;
+    align-items: center;
+}
+.mgi__banner__previous-button div,
+.mgi__banner__next-button div {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  .mgi__banner__previous-button:hover a,
+  .mgi__banner__next-button:hover a   {
+    opacity: 0.5;
+  }
+  
+  
+  .round {
+    border-radius: 50%;
+  }
+
+  .mgi__banner__manual{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;  
+
+  }
+  .mgi__banner__manual-btn{
+    border: 2px solid #FFFFFF;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .mgi__banner__manual-btn:not(:last-child){
+      margin-right: 20px;
+  }
+  .mgi__banner__manual-btn:hover{
+      background-color: #FFFFFF;
+  }
+.mgi__banner__manual-btn.active{
+    background-color: #FFFFFF;
+}
+.mgi__section__title{
+    max-width: 457px;
+    font-size: 18px;
+}
+.mgi__lasted-news,
+.mgi__option{
+    background-color: #f7f7f7;
+}
+.mgi__option-icon{
+    font-size: 32px;
+}
+.mgi__option__line{
+    margin-top: -36px;
+    margin-bottom: 38px;
+}
+.mgi__project__title h3{
+    font-size: 32px;
+}
+.mgi__project__slider-item{
+    margin: 0 10px ;
+}
+.mgi__project{
+    position: relative;
+}
+    .slick-prev{
+        position: absolute;
+        left: 8%;
+        top:55%;
+        transform: translateY(-50%);
+        background:none;
+        color:black;
+        border: none;
+        z-index: 2;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .slick-next{
+        position: absolute;
+        right: 8%;
+        top:55%;
+        transform: translateY(-50%);
+        background:none;
+        color:black;
+        border: none;
+        z-index: 2;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .mgi__project__slider{
+        width: 100%;
+        display: flex;
+    }
+    .mgi__project__slider-item{
+    }
+    .mgi__project__body{
+        overflow: hidden;
+    }
+    .mgi__option__course{
+        position: relative;
+    }
+    .mgi__option__course::after{
+        content: "";
+        width: 42px;
+        height: 1.5px;
+        background-color: #3498DB;
+        position: absolute;
+        bottom:-20px;
+        left: 0;
+        
+    }
+    .mgi__project__title{
+        position: relative;
+    }
+    .mgi__project__title::after{
+        content: "";
+        width: 42px;
+        height: 1.5px;
+        background-color: #3498DB;
+        position: absolute;
+        left: 48%;
+    }
+    .mgi__theme-bg__button{
+        width: 177px;
+    }
+    .mgi__theme-bg__button:hover{
+        background-color: #FFFFFF;
+        color: black;
+        transition: 0.4s;
+    }
+    .mgi__clients-comment__title h3{
+        font-size: 32px;
+    }
+    .mgi__clients-comment__title{
+        position: relative;
+    }
+    .mgi__clients-comment__title::after{
+        content: "";
+        width: 42px;
+        height: 1.5px;
+        background-color: #3498DB;
+        position: absolute;
+        left: 50%;
+        bottom: -30px;
+        transform: translateX(-50%);
+    }
+    .mgi__clients-comment{
+        position: relative;
+        overflow: hidden;
+    }
+    .mgi__clients-comment__container{
+        overflow: hidden;
+    }
+    .mgi__clients-comment__slider{
+        display: flex;
+    }
+    .mgi__clients-comment__slider-item{
+        position: relative;
+    }
+    .mgi__clients-comment__slider-item::after{
+        font-family: arial;
+        font-size: 85px;
+        font-style: normal;
+        position: absolute;
+        top: -20px;
+        left: 0;
+        content: '"';
+    }
+    .mgi__clients-comment__block-img{
+        position: absolute;
+        z-index: 10;
+    }
+    .mgi__clients-comment__img{
+        overflow-x: auto;
+        display: flex;
+        scroll-snap-type: x mandatory;
+    }
+    .mgi__clients-comment__img-item{
+        width: 128.571px;
+        margin-right: 36px ;
+    }
+    .mgi__lasted-news__title h3{
+        font-size: 32px;
+    }
+    .mgi__lasted-news__title{
+        position: relative;
+    }
+    .mgi__lasted-news__title::after{
+        content: "";
+        width: 42px;
+        height: 1.5px;
+        background-color: #3498DB;
+        position: absolute;
+        left: 50%;
+        bottom: -30px;
+        transform: translateX(-50%);
+    }
+    .mgi__project__slider-item{
+        cursor: pointer;
+    }
+    .mgi__lasted-news__container{
+        overflow: hidden;
+    }
+    .mgi__lasted-news{
+        position: relative;
+    }
+    .mgi__lasted-news__slider{
+        display: flex;
+    }
+    .mgi__lasted-news__slider-title:hover{
+        color: #66CCFF;
+       transition: 0.5s;
+    }
+    #footeremail:hover a{
+        color: rgba(156, 163, 175, var(--tw-text-opacity));
+        transition: 0.5s;
+    }
+    .mgi__footerlinkhover{
+        cursor: pointer;
+    }
+    .mgi__footerlinkhover:hover p{
+        color: rgba(96, 165, 250, var(--tw-text-opacity));
+        transition: 0.5s;
+    }
+    .mgi__footer__search{
+        position: relative;
+        padding: 15px 0;
+    }
+    .mgi__footer__input{
+        outline: none;
+        background: none;
+        width: 100%;
+        padding: 6px 42.5px 6px 12px ;
+        border: 1px solid rgba(96, 165, 250, var(--tw-text-opacity));
+        height: 40px;
+    }
+    .mgi__footer__icon i{
+        color: #fff;
+    }
+    .mgi__footer__icon{
+        position: absolute;
+        right: 0;
+        bottom: 21.5%;
+        background-color: rgba(96, 165, 250, var(--tw-text-opacity));
+        width: 18%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .mgi__footer__input:focus{
+        border: 1px solid rgba(156, 163, 175, var(--tw-text-opacity));
+        transition: 0.4s;
+        border-radius: 0;
+    }
+    .mgi__footer__container{
+        position: relative;
+        padding-bottom: 100px;
+    }
+    .mgi__footer__contact{
+        position: absolute;
+        top: -120px;
+    }
+    .mgi__footer__contact:hover{
+        background-color: rgba(75, 85, 99, var(--tw-text-opacity));
+        transition: 0.5s;
+    }
