@@ -90,7 +90,8 @@ function make_slide(amountSlideAppear){
     let widthAllBox = widthItemAndMargin * slickslider.length;
     sliders.style.width=`${widthAllBox}px`
     slickslider.forEach(element =>{
-        element.style.width=`${widthItemAndMargin - 20}px`;
+        element.style="padding:0 10px";
+        element.style.width=`${widthItemAndMargin}px`;
     })
     //handle slide btn
     let count=0;
@@ -164,8 +165,7 @@ function make_slide2(amountSlideAppear){
     let widthCommentAllBox = widthCommentItemAndMargin * commentSlideItem.length;
     commentSliders.style.width=`${widthCommentAllBox}px`
     commentSlideItem.forEach(element =>{
-        element.style.marginRight='20px';
-        element.style.width=`${widthCommentItemAndMargin - 20}px`;
+        element.style.width=`${widthCommentItemAndMargin}px`;
     })
     //handle slide btn
     let countcomment=0;
@@ -221,8 +221,8 @@ function make_slide3(amountSlideAppear){
     let widthLastedAllBox = widthLastedItemAndMargin * lastedSlideItem.length;
     lastedSliders.style.width=`${widthLastedAllBox}px`
     lastedSlideItem.forEach(element =>{
-        element.style.marginRight='20px';
-        element.style.width=`${widthLastedItemAndMargin - 20}px`;
+        element.style="padding:0 10px";
+        element.style.width=`${widthLastedItemAndMargin}px`;
     })
     //handle slide btn
     let countlasted=0;

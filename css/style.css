@@ -78,7 +78,7 @@ transition: 1.5s;
 .mgi__banner__previous-button{
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: -40px;
     left: -40px;
     display: flex;
     align-items: center;
@@ -117,7 +117,7 @@ transition: 1.5s;
 .mgi__banner__next-button{
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: -40px;
     right: -40px;
     display: flex;
     align-items: center;
