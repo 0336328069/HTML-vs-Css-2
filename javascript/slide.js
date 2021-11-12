@@ -33,8 +33,6 @@ function handleChangeSlide(direction){
         positionX=positionX - slideItemWidth;
         sliderMain.style=`transform: translateX(${positionX}%) ; transition:1.5s`;
         index++;
-        console.log(positionX);
-        console.log(index)
     }
     else if (direction == -1){
         if(index <= 0) {
@@ -60,6 +58,7 @@ const slickprevBtn=document.querySelector(".slick-prev");
 document.addEventListener("DOMContentLoaded",function(){
     //reponsive
     console.log(window.innerWidth);
+    window.addEventListener("resize",onload);
     window.addEventListener("resize",function(){
         if(window.innerWidth >=992){
             make_slide(4);
@@ -106,7 +105,6 @@ function make_slide(amountSlideAppear){
         }
         sliders.style.transform =`translateX(${-count}px)`;
         sliders.style.transition="1s";
-        console.log(count);
     }, 5000);
         slicknextBtn.addEventListener("click",function(){
             count += widthItemAndMargin;
@@ -116,7 +114,6 @@ function make_slide(amountSlideAppear){
             }
             sliders.style.transform =`translateX(${-count}px)`
             sliders.style.transition="1s";
-            console.log(count);
         })
         slickprevBtn.addEventListener("click",function(){
             count -= widthItemAndMargin;
@@ -126,7 +123,6 @@ function make_slide(amountSlideAppear){
             }
             sliders.style.transform =`translateX(${-count}px)`
             sliders.style.transition="1s";
-            console.log(count);
         })
     }
 // --------------------------------------------------slider comment-----------------------------------------------
@@ -182,8 +178,7 @@ function make_slide2(amountSlideAppear){
             countcomment=0;
         }
         commentSliders.style.transform =`translateX(${-countcomment}px)`;
-        commentSliders.style.transition="1s";
-        console.log(countcomment);
+        commentSliders.style.transition="1s"
     }, 5000);
     }
 
@@ -241,55 +236,39 @@ function make_slide3(amountSlideAppear){
         }
         lastedSliders.style.transform =`translateX(${-countlasted}px)`;
         lastedSliders.style.transition="1s";
-        console.log(countlasted);
     }, 5000);
     }
 // -----------------------------------------------------------------------------------------------------
-// const notslides = document.querySelector(".mgi__clients-comment__img");
-// const notslideritem= document.querySelectorAll(".mgi__clients-comment__img-item");
-// document.addEventListener("DOMContentLoaded",function(){
-//     console.log(window.innerWidth);
-//     window.addEventListener("resize",function(){
-//         if(window.innerWidth >=1280)
-//         {
-//             make_no_slide2(7);
-//         }
-//         else if(window.innerWidth >=992){
-//             make_no_slide2(5);
-//         }
-//         else if(window.innerWidth >= 768){
-//             make_no_slide2(3);
-//         }
-//         else {
-//             make_no_slide2(2);
-//         }
-//     });
-    
-//     const media = [
-//         window.matchMedia('min-width:1280px'),
-//         window.matchMedia('(min-width:992px)'),
-//         window.matchMedia('(min-width:768px)')
-//     ];
-//     if(media[0].matches)
-//     {
-//         make_no_slide2(7);
-//     }else if (media[1].matches){
-//         make_no_slide2(5);
-//     }else if(media[2].matches)
-//     {
-//         make_no_slide2(3);
-//     }else{
-//         make_no_slide2(2);
-//     }
-// })
+const notsliderContainer= document.querySelector(".mgi__clients-comment__block-img");
+const notslides = document.querySelector(".mgi__clients-comment__img");
 
-// function make_no_slide2(amountSlideAppear){
-//     const widthImageItemAndMargin = commentContainer.offsetWidth/amountSlideAppear;
+let pressed =false; 
+let startx;
+let x;
+
+notsliderContainer.addEventListener('mousedown',(e)=>{
+    pressed=true;
+    startx=e.offsetX - notslides.offsetLeft;
+    console.log(startx);
+    notsliderContainer.style.cursor='grabbing';
+})
+notsliderContainer.addEventListener('mouseenter',()=>{
+    notsliderContainer.style.cursor='grab';
+})
+// notsliderContainer.addEventListener('mouseleave',()=>{
+//     notsliderContainer.style.cursor='grab';
+// })
+notsliderContainer.addEventListener('mouseup',()=>{
+    notsliderContainer.style.cursor='grab';
+})
+window.addEventListener('mouseup',()=>{
+    pressed=false;
+})
+notsliderContainer.addEventListener('mousemove',(e)=>{
+    if(!pressed) return;
+    e.preventDefault();
+
+    x=e.offsetX
     
-//     let widthImageAllBox = widthImageItemAndMargin * notslideritem.length;
-//     notslides.style.width=`${widthImageAllBox}px`
-//     notslideritem.forEach(element =>{
-//         element.style.marginRight='20px';
-//         element.style.width=`${widthImageItemAndMargin - 20}px`;
-//     })
-//     }
+    notslides.style.left=`${x-startx}px`;
+})
