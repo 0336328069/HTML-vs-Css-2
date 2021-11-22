@@ -54,19 +54,21 @@ const sliders = document.querySelector(".mgi__project__slider");
 const slickslider =document.querySelectorAll(".mgi__project__slider-item");
 const slicknextBtn=document.querySelector(".slick-next");
 const slickprevBtn=document.querySelector(".slick-prev");
-
 document.addEventListener("DOMContentLoaded",function(){
     //reponsive
-    console.log(window.innerWidth);
-    window.addEventListener("resize",onload);
     window.addEventListener("resize",function(){
+        clearInterval(autoplay);
+        count=0;
         if(window.innerWidth >=992){
+            
             make_slide(4);
         }
         else if(window.innerWidth >= 768){
+            
             make_slide(2);
         }
         else {
+            
             make_slide(1);
         }
     });
@@ -77,14 +79,18 @@ document.addEventListener("DOMContentLoaded",function(){
     ];
     if(media[0].matches)
     {
+        
         make_slide(4);
     }else if (media[1].matches){
+        
         make_slide(2);
     }else{
+        
         make_slide(1);
     }
 })
 function make_slide(amountSlideAppear){
+    
     const widthItemAndMargin = body.offsetWidth/amountSlideAppear;
     
     let widthAllBox = widthItemAndMargin * slickslider.length;
@@ -97,8 +103,7 @@ function make_slide(amountSlideAppear){
     let count=0;
     let spacing= widthAllBox - widthItemAndMargin *amountSlideAppear;
     
-    setInterval(() => {
-        
+    autoplay = setInterval(() => {
         count+=widthItemAndMargin;
         if(count>spacing)
         {
@@ -134,6 +139,8 @@ const commentSlideItem=document.querySelectorAll(".mgi__clients-comment__slider-
 document.addEventListener("DOMContentLoaded",function(){
     console.log(window.innerWidth);
     window.addEventListener("resize",function(){
+        clearInterval(autoplay2);
+        countcomment=0;
         if(window.innerWidth >=992){
             make_slide2(3);
         }
@@ -171,7 +178,7 @@ function make_slide2(amountSlideAppear){
     let countcomment=0;
     let spacingcomment= widthCommentAllBox - widthCommentItemAndMargin *amountSlideAppear;
     
-    setInterval(() => {
+    autoplay2=setInterval(() => {
         countcomment+=widthCommentItemAndMargin;
         if(countcomment>spacingcomment)
         {
@@ -190,6 +197,8 @@ const lastedSlideItem=document.querySelectorAll(".mgi__lasted-news__slider-item"
 document.addEventListener("DOMContentLoaded",function(){
     console.log(window.innerWidth);
     window.addEventListener("resize",function(){
+        clearInterval(autoplay3);
+        countlasted=0;
         if(window.innerWidth >=992){
             make_slide3(3);
         }
@@ -228,7 +237,7 @@ function make_slide3(amountSlideAppear){
     let countlasted=0;
     let spacinglasted= widthLastedAllBox - widthLastedItemAndMargin *amountSlideAppear;
     
-    setInterval(() => {
+    autoplay3=setInterval(() => {
         countlasted+=widthLastedItemAndMargin;
         if(countlasted>spacinglasted)
         {
@@ -239,36 +248,63 @@ function make_slide3(amountSlideAppear){
     }, 5000);
     }
 // -----------------------------------------------------------------------------------------------------
-const notsliderContainer= document.querySelector(".mgi__clients-comment__block-img");
-const notslides = document.querySelector(".mgi__clients-comment__img");
+// const notsliderContainer= document.querySelector(".mgi__clients-comment__block-img");
+// const notslides = document.querySelector(".mgi__clients-comment__img");
 
-let pressed =false; 
-let startx;
-let x;
+// let pressed =false; 
+// let startx;
+// let x;
 
-notsliderContainer.addEventListener('mousedown',(e)=>{
-    pressed=true;
-    startx=e.offsetX - notslides.offsetLeft;
-    console.log(startx);
-    notsliderContainer.style.cursor='grabbing';
-})
-notsliderContainer.addEventListener('mouseenter',()=>{
-    notsliderContainer.style.cursor='grab';
-})
-// notsliderContainer.addEventListener('mouseleave',()=>{
+// notsliderContainer.addEventListener('mousedown',(e)=>{
+//     pressed=true;
+//     startx=e.offsetX - notslides.offsetLeft;
+//     console.log(startx);
+//     notsliderContainer.style.cursor='grabbing';
+// })
+// notsliderContainer.addEventListener('mouseenter',()=>{
 //     notsliderContainer.style.cursor='grab';
 // })
-notsliderContainer.addEventListener('mouseup',()=>{
-    notsliderContainer.style.cursor='grab';
-})
-window.addEventListener('mouseup',()=>{
-    pressed=false;
-})
-notsliderContainer.addEventListener('mousemove',(e)=>{
-    if(!pressed) return;
-    e.preventDefault();
+// // notsliderContainer.addEventListener('mouseleave',()=>{
+// //     notsliderContainer.style.cursor='grab';
+// // })
+// notsliderContainer.addEventListener('mouseup',()=>{
+//     notsliderContainer.style.cursor='grab';
+// })
+// window.addEventListener('mouseup',()=>{
+//     pressed=false;
+// })
+// notsliderContainer.addEventListener('mousemove',(e)=>{
+//     if(!pressed) return;
+//     e.preventDefault();
 
-    x=e.offsetX
+//     x=e.offsetX
     
-    notslides.style.left=`${x-startx}px`;
-})
+//     notslides.style.left=`${x-startx}px`;
+// })
+// --------------------------------------------------NAVBAR-----------------------------------------------------
+var navMobile=document.getElementById("nav-mobile");
+var navPC=document.getElementById("navbar-PC")
+window.onscroll= function() {scrollFunction()};
+function scrollFunction(){
+    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80)
+    {
+        
+        document.getElementById("logo-black").style.display="block";
+        navPC.style="position:fixed;left:0;right:0;background-color:white; color:black;animation:sticky ease 0.5s";
+        navMobile.style="position:fixed;left:0;right:0;background-color:white; color:black;animation:sticky ease 0.5s";
+    }
+    else 
+    {   
+        navPC.style="position:static;left:0;right:0;color:white;";
+        document.getElementById("logo-black").style.display="none";
+    }
+}
+// ------------------------------------------------------------------------------------------------
+
+function bodyoverflow(){
+    document.body.classList.add("overflow-hidden");
+}
+function removeoverflow(){
+    document.body.classList.remove("overflow-hidden");
+
+}
