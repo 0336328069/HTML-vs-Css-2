@@ -1126,3 +1126,26 @@ mgi__search-form__Mobile-sticky */
 .mgi__home-option__item:hover{
     color: #32CCFE;
 }
+
+.mgi__footer__change-size__btn h2{
+    font-size: 13px;
+    user-select: none;
+}
+.mgi__footer__change-size__icon,
+.mgi__footer__change-size__list-btn{
+    border:1px solid gray;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.mgi__footer__change-size__icon i,
+.mgi__footer__change-size__btn{
+    cursor: pointer;
+    padding: 8px 16px;
+    
+}
+
+.mgi__footer__change-size__icon:hover,
+.mgi__footer__change-size__btn:hover{
+    color: #FFFFFF;
+    background-color: rgb(160, 153, 153);
+}

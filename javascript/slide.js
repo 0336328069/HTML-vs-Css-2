@@ -1,3 +1,5 @@
+
+
 const slider = document.querySelector(".mgi__banner__bg-image");
 const sliderMain = document.querySelector(".mgi__banner__container");
 const sliderItems=document.querySelectorAll(".mgi__banner__slide");
@@ -307,4 +309,17 @@ function bodyoverflow(){
 function removeoverflow(){
     document.body.classList.remove("overflow-hidden");
 
+}
+
+function resizePC(){
+    window.open("http://127.0.0.1:5500/index.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1280,height=987");
+}
+function resizeTablet(){
+    window.open("http://127.0.0.1:5500/index.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=993,height=987");
+}
+function resizeTabletxs(){
+    window.open("http://127.0.0.1:5500/index.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=768,height=987");
+}
+function resizeMobile(){
+    window.open("http://127.0.0.1:5500/index.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=450,height=987");
 }
