@@ -1196,8 +1196,3 @@ mgi__search-form__Mobile-sticky */
     left: 80%;
     transition: 0.5s;
 }
-#bars-mobile:not(:checked) ~ .mgi__body{
-    position: relative;
-    left: 0;
-    transition: 0.5s;
-}
