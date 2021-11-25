@@ -5,6 +5,12 @@
 .overflow-hidden{
     overflow-y: hidden;
 }
+.no-overflow{
+    overflow-y: auto;
+}
+body{
+    position: relative;
+}
 .mgi__body{
     position: relative;
     overflow-x: hidden;
@@ -14,6 +20,7 @@
         background-color: black;
     }
 }
+
 @keyframes sticky {
     from{
         transform: translateY(-80px);
@@ -36,6 +43,7 @@
     z-index: 1;
 }
 .mgi__PC-Nav-Item{
+    position: relative;
     cursor: pointer;
     padding: 0 0.5rem;
     height: 100%;
@@ -659,11 +667,11 @@ input[type="checkbox"]{
 
 }
 
-#bars-button-sticky:checked ~ .mgi__body #mgi__navbar{
+#bars-button-sticky:checked ~ .mgi__body #navbar-PC{
     left: -320px;
     transition: 0.5s;
 }
-#bars-button-sticky:not(:checked) ~.mgi__body #mgi__navbar{
+#bars-button-sticky:not(:checked) ~.mgi__body #navbar-PC{
     left: 0;
     transition: 0.5s;
 }
@@ -917,7 +925,7 @@ mgi__search-form__Mobile-sticky */
 
 .mgi__hover-elements{
     position: fixed;
-    width: 100%;
+    width: 76%;
     height: 360px;
     top: 80px;
     left: 50%;
@@ -949,13 +957,12 @@ mgi__search-form__Mobile-sticky */
     transition: 0.3s;
 }
 .mgi__shop-option{
-    position: fixed;
+    position: absolute;
     width: 200px;
     background-color: #242424;
-    top: 80px;
-    left: 79%;
+    top: 50px;
+    right:-150px;
     z-index: 5;
-    transform: translateX(-50%);
     display: none;
 }
 .mgi__shop-option__item-drop{
@@ -990,13 +997,12 @@ mgi__search-form__Mobile-sticky */
     display: block;
 }
 .mgi__blog-option{
-    position: fixed;
+    position: absolute;
     width: 200px;
     background-color: #242424;
-    top: 80px;
-    left: 76%;
+    top: 50px;
+    right:-150px;
     z-index: 5;
-    transform: translateX(-50%);
     display: none;
 }
 
@@ -1004,13 +1010,12 @@ mgi__search-form__Mobile-sticky */
     display: block;
 }
 .mgi__portfolio-option{
-    position: fixed;
+    position: absolute;
     width: 200px;
     background-color: #242424;
-    top: 80px;
-    left: 70%;
+    top: 50px;
+    right:-120px;
     z-index: 5;
-    transform: translateX(-50%);
     display: none;
 }
 
@@ -1018,13 +1023,12 @@ mgi__search-form__Mobile-sticky */
     display: block;
 }
 .mgi__features-option{
-    position: fixed;
+    position: absolute;
     width: 200px;
     background-color: #242424;
-    top: 80px;
-    left: 65%;
+    top: 50px;
+    right:-120px;
     z-index: 5;
-    transform: translateX(-50%);
     display: none;
 }
 .mgi__features-option__item{
@@ -1069,13 +1073,12 @@ mgi__search-form__Mobile-sticky */
     display: block;
 }
 .mgi__headers-option{
-    position: fixed;
+    position: absolute;
     width: 430px;
     height: 450px;
-    top: 80px;
-    left: 65%;
+    top: 50px;
+    right:-300px ;
     z-index: 5;
-    transform: translateX(-50%);
     display: none;
     background: url("../img/PAGE__background.jpg");
 }
@@ -1092,14 +1095,13 @@ mgi__search-form__Mobile-sticky */
     display: block;
 }
 .mgi__home-option{
-    position: fixed;
+    position: absolute;
     width: 200px;
     height: auto;
     background-color: #242424;
-    top: 80px;
-    left: 55%;
+    top: 50px;
+    right: -150px;
     z-index: 5;
-    transform: translateX(-50%);
     display: none;
 }
 .mgi__home-option__item-animation{
@@ -1148,4 +1150,54 @@ mgi__search-form__Mobile-sticky */
 .mgi__footer__change-size__btn:hover{
     color: #FFFFFF;
     background-color: rgb(160, 153, 153);
+}
+
+
+.mgi__lasted-news__slider-item img{
+    width: 100%;
+    height: auto;
+}
+
+.mgi__bars-mobile{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80%;
+    min-height: 100%;
+    background-color: #333;
+    z-index: 9999;
+    overflow-y: hidden;
+}
+.mgi__bars-mobile__search input{
+    width: 100%;
+    border-radius: 20px;
+    font-size: 14px;
+    height: 30px;
+    padding: 0 8px;
+    outline: none;
+    color: black;
+}
+
+.mgi__bars-mobile__option:hover{
+    color: #32CCFE;
+}
+.mgi__bars-mobile__option{
+    border-bottom: 1px solid gray ;
+}
+#bars-mobile:checked ~ .mgi__body .mgi__bars-mobile{
+    margin-left: 0;
+}
+#bars-mobile:not(:checked) ~ .mgi__body .mgi__bars-mobile{
+    margin-left: -80%;
+    transition: 0.2s;
+}
+#bars-mobile:checked ~ .mgi__body{
+    position: fixed;
+    left: 80%;
+    transition: 0.5s;
+}
+#bars-mobile:not(:checked) ~ .mgi__body{
+    position: relative;
+    left: 0;
+    transition: 0.5s;
 }

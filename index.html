@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="build/main.css">
-    <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
-<body>
-    
+<body class="font-sans" id="main">
+    <input type="checkbox" id="bars-mobile">
     <input type="checkbox" id="view-cart">
     <input type="checkbox" id="setting-check">
     <input type="checkbox" id="bars-button-sticky">
+    
     <div class="mgi__body" id="body-block">
         <header>
                 <input type="checkbox"  id="search-check">
                 <div class="mgi__PC__navbar-block text-white" id="navbar-PC">
                     <div class="mgi__PC-Nav-container container mx-auto lg:max-w-7xl h-20 flex justify-between items-center px-10">
                         <div class="flex items-center">
-                            <div class="mgi__Mobile-Nav_Menu block md-2:hidden h-full flex items-center px-2 cursor-pointer">
-                                <i class="fas fa-bars"></i>
-                            </div>
+                            <label for="bars-mobile" onclick="bodyoverflow()">
+                                <div class="mgi__Mobile-Nav_Menu block md-2:hidden h-full flex items-center px-2 cursor-pointer">
+                                    <i class="fas fa-bars"></i>
+                                </div>                                
+                            </label>
                             <a href="#" class="mgi__PC-Nav-logo h-full flex items-center cursor-pointer">
                                 <img id="logo-light" src="img/logo-light (1).png" alt="">
                                 <img id="logo-black" src="img/logo-black.png" alt="">
@@ -195,7 +196,7 @@
                                 </div>
                                 <div class="mgi__PC-Nav-Item" id="pages-hover">
                                     <p class="nav-item">PAGES</p>
-                                    <div class="mgi__pages-option text-white">
+                                    <div class="mgi__pages-option text-white ">
                                         <div class="mgi__pages-option__inner grid grid-cols-4 gap-8 p-8">
                                             <div class="mgi__pages-option__list-item">
                                                 <h1 class="font-semibold">PAGE LAYOUT</h1>
@@ -643,8 +644,8 @@
                                 
                                 <div class="mgi__PC-Nav-Item" id="elements-hover">
                                     <p class="nav-item">ELEMENTS</p>
-                                    <div class="mgi__hover-elements md-2:max-w-6xl">
-                                        <div class="grid grid-cols-4 p-8 text-white font-sans gap-4">
+                                    <div class="mgi__hover-elements">
+                                        <div class="grid grid-cols-4 p-8 text-white  gap-4">
                                             <div class="mgi__hover-elements__list-item">
                                             <h1>ELEMENTS 1</h1>
                                             <div class="mgi__hover-elements__item flex gap-4 mt-4 items-center">
@@ -921,6 +922,81 @@
                     </div>
                 </div>
         </header>
+        <div class="mgi__bars-mobile text-white md-2:hidden">
+            <div class="mgi__bars-mobile__inner p-2">
+                <div class="mgi__bars-mobile__list grid grid-cols-1 gap-y-4">
+                    <div class="mgi__bars-mobile__title text-center">
+                        <h1>MENU</h1>
+                    </div>
+                    <div class="mgi__bars-mobile__search">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="mgi__bars-mobile__option flex justify-between px-2 py-1">
+                        <div class="mgi__bars-mobile__option-desc">
+                            <h1>HOME</h1>
+                        </div>
+                        <div class="mgi__bars-mobile__option-icon text-xs flex items-center">
+                            <p>14</p>
+                            <i class="fas fa-chevron-right text-xs pl-3"></i>
+                        </div>
+                    </div>
+                    <div class="mgi__bars-mobile__option flex justify-between items-center px-2 py-1">
+                        <div class="mgi__bars-mobile__option-desc">
+                            <h1>HEADERS</h1>
+                        </div>
+                        <div class="mgi__bars-mobile__option-icon text-xs flex items-center">
+                            <p>2</p>
+                            <i class="fas fa-chevron-right text-xs pl-3"></i>
+                        </div>
+                    </div>
+                    <div class="mgi__bars-mobile__option flex justify-between px-2 py-1">
+                        <div class="mgi__bars-mobile__option-desc">
+                            <h1>PAGES</h1>
+                        </div>
+                        <div class="mgi__bars-mobile__option-icon text-xs flex items-center">
+                            <p>4</p>
+                            <i class="fas fa-chevron-right text-xs pl-3"></i>
+                        </div>
+                    </div>
+                    <div class="mgi__bars-mobile__option flex justify-between px-2 py-1">
+                        <div class="mgi__bars-mobile__option-desc">
+                            <h1>FEATURES</h1>
+                        </div>
+                        <div class="mgi__bars-mobile__option-icon text-xs flex items-center">
+                            <p>8</p>
+                            <i class="fas fa-chevron-right text-xs pl-3"></i>
+                        </div>
+                    </div>
+                    <div class="mgi__bars-mobile__option flex justify-between px-2 py-1">
+                        <div class="mgi__bars-mobile__option-desc">
+                            <h1>PORTFOLIO</h1>
+                        </div>
+                        <div class="mgi__bars-mobile__option-icon text-xs flex items-center">
+                            <p>6</p>
+                            <i class="fas fa-chevron-right text-xs pl-3"></i>
+                        </div>
+                    </div>
+                    <div class="mgi__bars-mobile__option flex justify-between px-2 py-1">
+                        <div class="mgi__bars-mobile__option-desc">
+                            <h1>BLOG</h1>
+                        </div>
+                        <div class="mgi__bars-mobile__option-icon text-xs flex items-center">
+                            <p>7</p>
+                            <i class="fas fa-chevron-right text-xs pl-3"></i>
+                        </div>
+                    </div>
+                    <div class="mgi__bars-mobile__option flex justify-between px-2 py-1">
+                        <div class="mgi__bars-mobile__option-desc">
+                            <h1>ELEMENTS</h1>
+                        </div>
+                        <div class="mgi__bars-mobile__option-icon text-xs flex items-center">
+                            <p>4</p>
+                            <i class="fas fa-chevron-right text-xs pl-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="mgi__bars-option text-white pb-40p">
             <div class="mgi__bars-option__block cursor-pointer">
                 <label for="bars-button-sticky" onclick="removeoverflow()" >
@@ -942,7 +1018,7 @@
                 </div>
                 <div class="mgi__bars-option__item  flex items-center mt-2">
                     <img src="img/bars-1.jpg" alt="">
-                    <div class="mgi__bars-option__item-content cursor-pointer font-sans ml-6">
+                    <div class="mgi__bars-option__item-content cursor-pointer  ml-6">
                         <h4 class="font-semibold text-md">
                             Google Released New Android Application  
                         </h4>
@@ -951,7 +1027,7 @@
                 </div>
                 <div class="mgi__bars-option__item flex items-center mt-2">
                     <img src="img/bars-2.jpg" alt="">
-                    <div class="mgi__bars-option__item-content font-sans ml-6">
+                    <div class="mgi__bars-option__item-content  ml-6">
                         <h4 class="font-semibold text-md">
                             We Established our New office in california 
                         </h4>
@@ -960,7 +1036,7 @@
                 </div>
                 <div class="mgi__bars-option__item flex items-center mt-2">
                     <img src="img/bars-3.jpg" alt="">
-                    <div class="mgi__bars-option__item-content font-sans ml-6">
+                    <div class="mgi__bars-option__item-content  ml-6">
                         <h4 class="font-semibold text-md">
                             Another Milestone we reached in search engine optimization.
                         </h4>
@@ -1049,7 +1125,7 @@
                 </div>
             </div>
         </div>
-        <div class="mgi__view-cart divide-y divide-gray-400 p-4 font-sans text-white">
+        <div class="mgi__view-cart divide-y divide-gray-400 p-4  text-white">
             <div class="flex flex-col w-full">
                 <div class="mgi__view-cart__item flex flex-row gap-2 w-full">
                     <div class="mgi__view-cart__img-item flex w-full">
@@ -1114,56 +1190,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="mgi__blog-option text-white">
-            <div class="mgi__blog-option__inner grid grid-cols-1 p-4 gap-4">
-                <div class="mgi__blog-option__item flex justify-between items-center">
-                    <div>
-                        <p class="text-xs font-bold">GRID LAYOUT</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-chevron-right text-xs"></i>
-                    </div>
-                </div>
-                <div class="mgi__blog-option__item flex justify-between items-center">
-                    <div>
-                        <p class="text-xs font-bold">MASONRY LAYOUT</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-chevron-right text-xs"></i>
-                    </div>
-                </div>
-                <div class="mgi__blog-option__item">
-                    <p class="text-xs font-bold">CLASSIC LAYOUT</p>
-                </div>
-                <div class="mgi__blog-option__item">
-                    <p class="text-xs font-bold">LIST LAYOUT</p>
-                </div>
-                <div class="mgi__blog-option__item flex justify-between items-center">
-                    <div>
-                        <p class="text-xs font-bold">TIMELINE LAYOUT</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-chevron-right text-xs"></i>
-                    </div>
-                </div>
-                <div class="mgi__blog-option__item flex justify-between items-center">
-                    <div>
-                        <p class="text-xs font-bold">WITH SIDEBAR</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-chevron-right text-xs"></i>
-                    </div>
-                </div>
-                <div class="mgi__blog-option__item flex justify-between items-center">
-                    <div>
-                        <p class="text-xs font-bold">SINGLE LAYOUT</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-chevron-right text-xs"></i>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+    
         
         <div class="mgi__banner">
             <div class="mgi__banner__bg-image">
@@ -1181,7 +1208,7 @@
                         <div class="mgi__banner-button h-12 md:m-0 mt-8 w-full flex justify-center">
         
                             <div class="mgi__banner-button h-10 px-3  border-solid rounded-3xl bg-blue-400 flex items-center hover:bg-gray-900">
-                               <a href="#" class="py-5 px-3 text-sm font-sans font-semibold">LEARN MORE</a> 
+                               <a href="#" class="py-5 px-3 text-sm  font-semibold">LEARN MORE</a> 
                             </div>
                         </div>
                     </div>
@@ -1195,7 +1222,7 @@
                         <div class="mgi__banner-button h-12 md:m-0 mt-8 w-full flex justify-center">
         
                             <div class="mgi__banner-button h-10 px-3  border-solid rounded-3xl bg-blue-400 flex items-center hover:bg-gray-900">
-                               <a href="#" class="py-5 px-3 text-sm font-sans font-semibold">LEARN MORE</a> 
+                               <a href="#" class="py-5 px-3 text-sm  font-semibold">LEARN MORE</a> 
                             </div>
                         </div>
                     </div>
@@ -1209,7 +1236,7 @@
                         <div class="mgi__banner-button h-12 md:m-0 mt-8 w-full flex justify-center">
         
                             <div class="mgi__banner-button h-10 px-3  border-solid rounded-3xl bg-blue-400 flex items-center hover:bg-gray-900">
-                               <a href="#" class="py-5 px-3 text-sm font-sans font-semibold">LEARN MORE</a> 
+                               <a href="#" class="py-5 px-3 text-sm  font-semibold">LEARN MORE</a> 
                             </div>
                         </div>
                     </div>
@@ -1227,27 +1254,27 @@
         </div>
         <div class="mgi__section py-12 lg:max-w-6xl container mx-auto">
             <div>
-                <h5 class="px-4 mb-4 font-semibold mgi__section__title font-sans">We have more than 10 years experience in web design and development.</h5>
+                <h5 class="px-4 mb-4 font-semibold mgi__section__title ">We have more than 10 years experience in web design and development.</h5>
                 <div class="grid grid-cols-1 md-2:grid-cols-2 gap-16 px-4">
                     <div class="mb-30">
                         <img src="img/section-img.jpg" alt="" class="mb-10">
-                        <p class="font-sans">Et culpa dolore odio voluptate suscipit corporis sed ad sunt autem! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p class="">Et culpa dolore odio voluptate suscipit corporis sed ad sunt autem! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
-                    <div class="font-sans">
+                    <div class="">
                         <p class="mb-19">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et culpa dolore odio voluptate suscipit corporis sed ad sunt autem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et culpa dolore odio voluptate suscipit corporis sed ad sunt autem! </p>
                         <p class="mb-50">Et culpa dolore odio voluptate suscipit corporis sed ad sunt autem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                         <div class="grid grid-cols-1 md-2:grid-cols-3 text-2xl">
                             <div class="mgi__section__icon flex items-center  ">
                                 <i class="fas fa-chart-bar mr-2 text-blue-300"></i>
-                                <h4 class="font-sans text-center">Analysis</h4>
+                                <h4 class=" text-center">Analysis</h4>
                             </div>
                             <div class="mgi__section__icon flex items-center  ">
                                 <i class="fas fa-paint-brush mr-2 text-blue-300"></i>
-                                <h4 class="font-sans text-center">Design</h4>
+                                <h4 class=" text-center">Design</h4>
                             </div>
                             <div class="mgi__section__icon flex items-center  ">
                                 <i class="fas fa-rocket mr-2 text-blue-300"></i>
-                                <h4 class="font-sans text-center">Launch</h4>
+                                <h4 class=" text-center">Launch</h4>
                             </div>
                         </div>
                     </div>
@@ -1257,7 +1284,7 @@
         <div class="mgi__option py-20">
             <div class="container mx-auto px-15 lg:max-w-6xl">
                 <div class="mgi__option__title mb-50 px-15">
-                    <h1 class="font-sans text-2xl font-light text-center">We Build Awesome and Beautiful Premium HTML, Wordpress, Magento, Joomla, E-commerce Themes and Email Templates. </h1>
+                    <h1 class=" text-2xl font-light text-center">We Build Awesome and Beautiful Premium HTML, Wordpress, Magento, Joomla, E-commerce Themes and Email Templates. </h1>
                 </div>
                 <div class="grid md-2:grid-cols-3 grid-cols-1 gap-30">
                     <div class="mgi__option__item">
@@ -1266,7 +1293,7 @@
                                 <i class="fas fa-horse-head mgi__option-icon text-gray-100" ></i>
                             </div>
                         </div>
-                        <h5 class="mgi__option__course font-sans text-2xl font-base mb-15">Creative Design</h5>
+                        <h5 class="mgi__option__course  text-2xl font-base mb-15">Creative Design</h5>
                         
                         
                         <div class="mgi__option__content mt-50">
@@ -1279,7 +1306,7 @@
                                 <i class="fas fa-mobile-alt mgi__option-icon text-gray-100" ></i>
                             </div>
                         </div>
-                        <h5 class="mgi__option__course font-sans text-2xl font-base mb-15">App Development</h5>
+                        <h5 class="mgi__option__course  text-2xl font-base mb-15">App Development</h5>
                         
                         
                         <div class="mgi__option__content mt-50">
@@ -1292,7 +1319,7 @@
                                 <i class="far fa-envelope mgi__option-icon text-gray-100" ></i>
                             </div>
                         </div>
-                        <h5 class="mgi__option__course font-sans text-2xl font-base mb-15">Email Marketing</h5>
+                        <h5 class="mgi__option__course  text-2xl font-base mb-15">Email Marketing</h5>
                         
                         
                         <div class="mgi__option__content mt-50">
@@ -1305,7 +1332,7 @@
                                 <i class="fas fa-atom mgi__option-icon text-gray-100" ></i>
                             </div>
                         </div>
-                        <h5 class="mgi__option__course font-sans text-2xl font-base mb-15">Online Marketing</h5>
+                        <h5 class="mgi__option__course  text-2xl font-base mb-15">Online Marketing</h5>
                         
                         
                         <div class="mgi__option__content mt-50">
@@ -1318,7 +1345,7 @@
                                 <i class="fas fa-shopping-bag mgi__option-icon text-gray-100" ></i>
                             </div>
                         </div>
-                        <h5 class="mgi__option__course font-sans text-2xl font-base mb-15">E Commerce</h5>
+                        <h5 class="mgi__option__course  text-2xl font-base mb-15">E Commerce</h5>
                         
                         
                         <div class="mgi__option__content mt-50">
@@ -1331,7 +1358,7 @@
                                 <i class="fab fa-gratipay mgi__option-icon text-gray-100" ></i>
                             </div>
                         </div>
-                        <h5 class="mgi__option__course font-sans text-2xl font-base mb-15">Friendly Support</h5>
+                        <h5 class="mgi__option__course  text-2xl font-base mb-15">Friendly Support</h5>
                         
                         <div class="mgi__option__content mt-50">
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.  </p>
@@ -1340,7 +1367,7 @@
                 </div>
             </div>
         </div>
-        <div class="mgi__project font-sans py-20">
+        <div class="mgi__project  py-20">
             <div class="slick-prev">
                 <i class="fas fa-angle-left text-gray-900"></i>
             </div>
@@ -1352,7 +1379,7 @@
                     <h3 class="mb-15 font-medium">Our Latest Projects</h3>
                     <p class="mb-15">We Build Awesome and Beautiful Premium HTML, Wordpress, Magento, Joomla, E-commerce Themes and Email Templates. </p>
                 </div>
-                <div class="mgi__project__slider font-sans">
+                <div class="mgi__project__slider ">
                     <div class="mgi__project__slider-item">
                         <img src="img/slider-item1.jpg" alt="">
                         <div class="flex justify-center font-semibold text-lg mt-4">
@@ -1402,7 +1429,7 @@
             </div>
         </div>
         <div class="mgi__theme-bg py-30 w-full bg-blue-500">
-            <div class="container mx-auto max-w-6xl font-sans text-white md:flex justify-between px-10p">
+            <div class="container mx-auto max-w-6xl  text-white md:flex justify-between px-10p">
                 <div class="mgi__theme-bg__content">
                     <h6 class="max-w-3xl font-semibold text-lg flex-wrap">We ensure quality & support. People love us & we love them. We provide services more than 100000 Customers worldwide. <strong class="cursor-pointer">Do you need any Help?</strong></h6>
                 </div>
@@ -1415,7 +1442,7 @@
             </div>
         </div>
         <div class="mgi__clients-comment pt-20 pb-20">
-            <div class="mgi__clients-comment__container container mx-auto max-w-6xl font-sans">
+            <div class="mgi__clients-comment__container container mx-auto max-w-6xl ">
                 <div class="mgi__clients-comment__title w-full">
                     <h3 class="font-medium text-center">What Clients Says?</h3>
                 </div>

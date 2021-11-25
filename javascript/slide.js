@@ -250,50 +250,20 @@ function make_slide3(amountSlideAppear){
     }, 5000);
     }
 // -----------------------------------------------------------------------------------------------------
-// const notsliderContainer= document.querySelector(".mgi__clients-comment__block-img");
-// const notslides = document.querySelector(".mgi__clients-comment__img");
 
-// let pressed =false; 
-// let startx;
-// let x;
-
-// notsliderContainer.addEventListener('mousedown',(e)=>{
-//     pressed=true;
-//     startx=e.offsetX - notslides.offsetLeft;
-//     console.log(startx);
-//     notsliderContainer.style.cursor='grabbing';
-// })
-// notsliderContainer.addEventListener('mouseenter',()=>{
-//     notsliderContainer.style.cursor='grab';
-// })
-// // notsliderContainer.addEventListener('mouseleave',()=>{
-// //     notsliderContainer.style.cursor='grab';
-// // })
-// notsliderContainer.addEventListener('mouseup',()=>{
-//     notsliderContainer.style.cursor='grab';
-// })
-// window.addEventListener('mouseup',()=>{
-//     pressed=false;
-// })
-// notsliderContainer.addEventListener('mousemove',(e)=>{
-//     if(!pressed) return;
-//     e.preventDefault();
-
-//     x=e.offsetX
-    
-//     notslides.style.left=`${x-startx}px`;
-// })
 // --------------------------------------------------NAVBAR-----------------------------------------------------
 var navMobile=document.getElementById("nav-mobile");
 var navPC=document.getElementById("navbar-PC")
-window.onscroll= function() {scrollFunction()};
+window.onscroll= function()
+{
+    scrollFunction();
+}
 function scrollFunction(){
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80)
     {
         
         document.getElementById("logo-black").style.display="block";
         navPC.style="position:fixed;left:0;right:0;background-color:white; color:black;animation:sticky ease 0.5s";
-        navMobile.style="position:fixed;left:0;right:0;background-color:white; color:black;animation:sticky ease 0.5s";
     }
     else 
     {   
@@ -304,7 +274,15 @@ function scrollFunction(){
 // ------------------------------------------------------------------------------------------------
 
 function bodyoverflow(){
-    document.body.classList.add("overflow-hidden");
+    var x=document.getElementById("main");
+    if(x.className === 'overflow-hidden')
+    {
+        x.className = 'no-overflow';
+    }
+    else
+    {
+        x.className ='overflow-hidden';
+    }
 }
 function removeoverflow(){
     document.body.classList.remove("overflow-hidden");
