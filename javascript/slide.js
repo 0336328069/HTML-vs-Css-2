@@ -273,8 +273,8 @@ function scrollFunction(){
 }
 // ------------------------------------------------------------------------------------------------
 
+var x=document.getElementById("main");
 function bodyoverflow(){
-    var x=document.getElementById("main");
     if(x.className === 'overflow-hidden')
     {
         x.className = 'no-overflow';
@@ -284,14 +284,19 @@ function bodyoverflow(){
         x.className ='overflow-hidden';
     }
 }
+function removeoverflow(){
+    x.className='no-overflow';
+}
 var barsiconMobile= document.getElementById("bars-mobile-icon");
 var menuNav=document.getElementById("menu-nav-mobile");
+var mainmenuNav=document.getElementById("main-bars-mobile");
 var bodyblock=document.getElementById("body-block");
 
 
 window.addEventListener("click", function(event) {
-    if(event.target!=menuNav){
+    if(event.target==menuNav){
         document.getElementById("bars-mobile").checked=  !document.getElementById("bars-mobile").checked;
+        
     }
 });
     

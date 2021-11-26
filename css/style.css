@@ -1180,3 +1180,11 @@ mgi__search-form__Mobile-sticky */
     left: 80%;
     transition: 0.5s;
 }
+
+#main-bars-mobile{
+    display: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
