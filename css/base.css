@@ -1,0 +1,42 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+   }
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+:root{
+    --white-color:#FFFFFF;
+    --black-color:#212121;
+    --bg-dark:#323232;
+    --bg-setting-1:#1abc9c;
+    --bg-setting-2:#006b63;
+    --bg-setting-3:#336E7B;
+    --bg-setting-4:#e67e22;
+    --bg-setting-5:#ff6a30;
+    --bg-setting-6:#eaab00;
+    --bg-setting-7:#37479d;
+    --bg-setting-8:#3498db;
+    --bg-setting-9:#32c5d2;
+    --bg-setting-10:#5893dd;
+    --bg-setting-11:#e7505a;
+    --bg-setting-12:#cdb083;
+    --bg-bars-1:#3C599F;
+    --bg-bars-2:#32CCFE;
+    --bg-bars-3:#0085AE;
+    --bg-bars-4:#CC2127;
+    --bg-bars-5:#CF3D2E;
+    --bg-bars-6:#C52F30;
+    --bg-bars-7:#F46899;
+    --bg-bars-8:#FF0084;
+    --bg-bars-9:#025DAC;
+}
